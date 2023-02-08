@@ -13,8 +13,10 @@ const quizReducer =(state, action) => {
 
     switch(action.type) {
         case "CHANGE_STATE":
-            console.log("caiu")
-            return state
+            return {
+                ...state,
+                gameStage: STAGES[1],
+            }
 
         default:
             return state
