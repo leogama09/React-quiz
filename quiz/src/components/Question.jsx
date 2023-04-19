@@ -22,7 +22,7 @@ const Question = () => {
   return (
     <div id="question">
       <p>
-        Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}
+        Question {quizState.currentQuestion + 1} of {quizState.questions.length}
       </p>
       <h2>{currentQuestion.question}</h2>
       <div id="options-container">
@@ -39,10 +39,10 @@ const Question = () => {
       {!quizState.answerSelected && !quizState.help && (
         <>
           {currentQuestion.tip && (
-            <button onClick={() => dispatch({ type: "SHOW_TIP" })}>Dica</button>
+            <button onClick={() => dispatch({ type: "SHOW_TIP" })}>Clue</button>
           )}
           <button onClick={() => dispatch({ type: "REMOVE_OPTION" })}>
-            Excluir uma
+            Delete one
           </button>
         </>
       )}
@@ -51,7 +51,7 @@ const Question = () => {
       )}
       {quizState.answerSelected && (
         <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
-          Continuar
+          Continue
         </button>
       )}
     </div>

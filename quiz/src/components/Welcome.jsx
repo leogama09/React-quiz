@@ -10,10 +10,10 @@ const Welcome = () => {
 
   return (
     <div id="welcome">
-      <h2>Seja bem-vindo</h2>
-      <p>Clique no botão abaixo para começar:</p>
+      <h2>Welcome!</h2>
+      <p>Click on the button below to get started:</p>
       <button onClick={() => dispatch({ type: "CHANGE_STAGE" })}>
-        Iniciar
+        Start
       </button>
       <img src={Quiz} alt="Início do Quiz" />
     </div>

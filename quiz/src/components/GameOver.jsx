@@ -11,14 +11,14 @@ const GameOver = () => {
 
   return (
     <div id="gameover">
-      <h2>Fim de jogo!</h2>
-      <p>Pontuação: {quizState.score}</p>
+      <h2>Game over!</h2>
+      <p>Score: {quizState.score}</p>
       <p>
-        Você acertou {quizState.score} de {quizState.questions.length}{" "}
-        perguntas.
+        You guessed {quizState.score} of {quizState.questions.length}{" "}
+        questions.
       </p>
       <img src={WellDone} alt="Fim do Quiz" />
-      <button onClick={() => dispatch({ type: "NEW_GAME" })}>Reiniciar</button>
+      <button onClick={() => dispatch({ type: "NEW_GAME" })}>Retry</button>
     </div>
   );
 };
